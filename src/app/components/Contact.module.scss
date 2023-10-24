@@ -1,0 +1,105 @@
+// ---- Modal ----
+.myModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    // padding-top: 200px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+  }
+
+.modalBtn {
+    place-self: center;
+    width: 130px;
+    padding: 0.5rem;
+
+    background-color: white;
+    color: black;
+    font-family: Quicksand;
+  
+    border: none;
+    border-radius: 25px;
+  
+    transition: 300ms ease-in-out;
+    &:hover{
+      cursor: pointer;
+      background-color:#D76326;
+      color: white;
+    }
+  }
+  
+  .modalContent {
+      --blur: 10px;
+      position: relative;
+      background-color: rgba(114, 114, 114, 0.1);
+      margin: auto;
+      padding: 1.5rem 2rem 2rem 2rem;
+      border: 1px solid #888;
+      border-radius: 1rem;
+      width: 40%;
+    
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s;
+
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(var(--blur));
+      -webkit-backdrop-filter: blur(var(--blur));
+    }
+    
+    .modalHeader {
+      & h2 {
+        display: inline-block;
+      }
+    }
+    
+    .modalBody {
+      padding: 2px 16px;
+    }
+    
+    .close {
+      font-size: 1.5rem;
+      float: right;
+      &:hover,
+      &focus {
+        color: orange;
+        cursor: pointer;
+      }
+    }
+
+    .fade{
+        transition: opacity 0.15s linear;
+    }
+
+    .fade:not(.show){
+        opacity: 0;
+    }
+    
+    //animation
+    @-webkit-keyframes animatetop {
+      from {
+        top: -300px;
+        opacity: 0;
+      }
+      to {
+        top: 0;
+        opacity: 1;
+      }
+    }
+    
+    @keyframes animatetop {
+      from {
+        top: -300px;
+        opacity: 0;
+      }
+      to {
+        top: 0;
+        opacity: 1;
+      }
+    }
+  
+  
