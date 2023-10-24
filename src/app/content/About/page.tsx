@@ -16,6 +16,8 @@ const About = () => {
 
       setData(jsonData);
     })();
+
+
   }, []);
 
   return (
@@ -26,7 +28,7 @@ const About = () => {
       <div>
         {data &&
           data.content.map((item: Content, index: number) => (
-            <div key={index}>{item.id}</div>
+            <div key={index}>{item.name}</div>
           ))}
       </div>
     </div>

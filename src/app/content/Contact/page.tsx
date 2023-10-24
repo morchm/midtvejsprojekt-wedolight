@@ -7,7 +7,7 @@ const Contact = () =>{
         <>
         <Header/>
         <div id={style.contactContainer} style={{backgroundImage: `url(${img.src})` }}>
-            <div>tours</div>
+            <div>contact</div>
         </div>
         </>
     )
