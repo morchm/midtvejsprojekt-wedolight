@@ -1,38 +1,36 @@
 "use client";
 import style from "@/app/content/About/about.module.scss";
-import img from "../../../../public/images/front.png";
-import { aboutContent, Content } from "@/app/types/elementTypes";
-import { useEffect, useState } from "react";
-import { content } from "../../../../public/json/elements.json";
+import { PageContent } from "@/app/types/elementTypes";
+import { ReactNode, useEffect, useState } from "react";
 
 const About = () => {
-  const [data, setData] = useState<aboutContent | null>(null);
+  const [data, setData] = useState<PageContent>();
 
   useEffect(() => {
     (async () => {
-      const data = await fetch("");
-
+      const data = await fetch("/data/about.json");
       const jsonData = await data.json();
-
       setData(jsonData);
     })();
-
-
   }, []);
 
   return (
     <div
       id={style.aboutContainer}
-      style={{ backgroundImage: `url(${img.src})` }}
+      style={{ backgroundImage: `url(/images/front.png)` }}
     >
-      <div>
-        {data &&
-          data.content.map((item: Content, index: number) => (
-            <div key={index}>{item.name}</div>
-          ))}
-      </div>
+      {data && <PageContent content={data} />}
     </div>
   );
 };
+
+function PageContent(props: { children?: ReactNode; content: PageContent }) {
+  return (
+    <>
+      <h1 id={style.aboutTitle}>{props.content.title}</h1>
+      <p>{props.content.text}</p>
+    </>
+  );
+}
 
 export default About;

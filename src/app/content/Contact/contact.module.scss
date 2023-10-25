@@ -1,5 +1,18 @@
 #contactContainer{
     height: 100vh;
-    padding: 150px;
+    padding: 200px;
+    color: white;
     background-position: center;
 }
+
+#contactTitle{
+    font-family: "Quicksand";
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.textContainer{
+    width: 600px;
+    margin: auto;
+}
+

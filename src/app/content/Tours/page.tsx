@@ -2,9 +2,6 @@ import Header from "@/app/Header";
 import img from "../../../../public/images/background-tours.png";
 import style from "@/app/content/Tours/tours.module.scss";
 import Image from "next/image";
-import triangle from "../../../../public/images/triangle.png";
-import square from "../../../../public/images/square.png";
-import circle from "../../../../public/images/round-lamp.png";
 
 const Tours = () => {
   return (
@@ -15,32 +12,44 @@ const Tours = () => {
         id={style.toursContainer}
         style={{ backgroundImage: `url(${img.src})` }}
       >
+        <div className={style.lampTitle}>
+          <h3>Square</h3>
+          <h3>Triangle</h3>
+          <h3>Circle</h3>
+        </div>
 
         <div className={style.lampContainer}>
           <Image
             className={style.lamp}
-            src={square}
+            src="/images/square.png"
             width={200}
             height={200}
-            alt="triangle"
+            alt="square"
           ></Image>
 
           <Image
             className={style.lamp}
-            src={triangle}
+            src="/images/triangle.png"
             width={200}
             height={200}
-            alt="triangle"
+            alt="triangele"
           ></Image>
 
           <Image
             className={style.lamp}
-            src={circle}
+            src="/images/round-lamp.png"
             width={200}
             height={200}
-            alt="triangle"
+            alt="circle"
           ></Image>
         </div>
+
+
+        <div>
+          
+        </div>
+
+
       </div>
     </>
   );

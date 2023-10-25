@@ -1,9 +1,14 @@
 #aboutContainer{
     height: 100vh;
-    padding: 150px;
+    padding: 200px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 
     color: white;
+}
+
+#aboutTitle{
+    font-family: "Quicksand";
+    font-weight: bold;
 }

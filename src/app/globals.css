@@ -31,3 +31,8 @@ ul li a{
   color: white !important;
   text-decoration: none !important;
 }
+
+h1{
+  font-family: "Quicksand";
+  font-weight: bold;
+}
