@@ -6,7 +6,6 @@ import Image from "next/image";
 const Tours = () => {
   return (
     <>
-      <Header />
 
       <div
         id={style.toursContainer}

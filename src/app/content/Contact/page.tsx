@@ -18,7 +18,6 @@ const Contact = () => {
 
   return (
     <>
-      <Header />
       <div
         id={style.contactContainer}
         style={{ backgroundImage: `url(/images/contact.png)` }}
